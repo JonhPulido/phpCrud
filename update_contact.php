@@ -113,7 +113,7 @@
 					/>
 				</div>
 				<div class="form-group">
-					<button onclick="updateContact()" type="submit" class="btn btn-primary">Submit</button>
+					<button onclick="updateContact()" type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
 					<a class="btn btn-primary" href="contact_list.php">List of contacts</a>
 				</div>				
 

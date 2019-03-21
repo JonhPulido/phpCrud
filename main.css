@@ -6,3 +6,8 @@ form{
 h1{
 	margin-top: 20px;
 }
+
+.required{
+    border-color: red !important;
+    opacity: 0.65;
+}

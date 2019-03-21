@@ -15,43 +15,6 @@
 						 dateFormat: 'yy-mm-dd'
 					});
 			  });
-			  function submitData(){
-				const form = document.getElementById("main_form");
-				const phone = $('input[id="phoneInput"]').val();
-				var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;  
-				const validPhone = (phone) => {  
-					var format = re.exec (phone); 
-					if (!format) {
-						return false; 
-					}else{
-						return true;
-					} 
-				}
-				let count = 0;
-				let totalInput = 0;
-				$('input[required=true]').each(function(){
-					totalInput = totalInput + 1;
-					if($(this).val()!=""){
-			   			count = count + 1;
-					}
-				 });
-				//valida que todos los campos requeridos esten completos
-				if(count == totalInput && validPhone(phone)){ 
-					$.ajax({
-						type: "POST",
-						url: 'http://localhost/TestPhp/controller/insert.php',
-						data: $(form).serialize(),
-						dataType: 'text',
-						success : function(res) {
-							console.log(res)
-							alert('form was submitted');
-							window.location.href = "http://localhost/TestPhp/contact_list.php";
-						}
-				});
-			}else{
-				alert('favor de completar todos los campos requeridos!');
-			}
-		};
 		 </script>
 		<title>Test</title>
 	</head>
@@ -70,8 +33,7 @@
 						type="text"
 						name="name" 
 						class="form-control" 
-						id="nameInput" 
-						aria-describedby="emailHelp" 															
+						id="nameInput" 															
 						placeholder="Enter your name"
 				        required=true
 					/>
@@ -99,8 +61,7 @@
 						type="email"
 						name="email" 
 						class="form-control" 
-						id="emailInput" 
-						aria-describedby="emailHelp" 															
+						id="emailInput" 															
 						placeholder="Enter email"
 						required=true
 					/>
@@ -112,8 +73,7 @@
 						type="password"
 						name="password" 
 						class="form-control" 
-						id="passwordInput" 
-						aria-describedby="emailHelp" 															
+						id="passwordInput" 															
 						placeholder="Password"
 						required=true
 					/>
@@ -123,10 +83,9 @@
 					<label for="phoneInput">Phone Number</label>
 					<input 
 						type="tel" 
-						id="phoneInput" 
 						name="phone"
-						class="form-control" 
-				        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+						class="form-control"
+						id="phoneInput"  
 				        placeholder="123-456-7890" 
 				        required=true
 				    />
@@ -150,4 +109,5 @@
 			</form>
 		</div>	
 	</body>
+	<script src="scripts/script.js"></script>
 </html>
