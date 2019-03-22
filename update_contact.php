@@ -24,7 +24,7 @@
 				});
 			  } );
 		  </script>
-		<title>Test</title>
+		<title>Update Contact</title>
 	</head>
 	<body>
 		<div class="d-flex justify-content-center">
@@ -32,7 +32,7 @@
 		</div>
 		
 		<div class="conteiner">
-			<form id="update_form">
+			<form id="update_form"  onchange="validateForm()">
 				<div class="form-group">
 					<input name="id" type="hidden" value="<?php echo $id;?>"/>
 					<label for="nameInput">Name</label>
@@ -113,7 +113,7 @@
 					/>
 				</div>
 				<div class="form-group">
-					<button onclick="updateContact()" type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+					<button onclick="updateContact()" type="submit" class="btn btn-primary" disabled='true' id="submitBtn">Submit</button>
 					<a class="btn btn-primary" href="contact_list.php">List of contacts</a>
 				</div>				
 

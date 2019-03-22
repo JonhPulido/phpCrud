@@ -16,7 +16,7 @@
 					});
 			  });
 		 </script>
-		<title>Test</title>
+		<title>Add Contact</title>
 	</head>
 	<body>
 
@@ -25,7 +25,7 @@
 		</div>
 
 		<div class="conteiner">
-			<form id="main_form">
+			<form id="main_form" onchange="validateForm()">
 
 				<div class="form-group">
 					<label for="nameInput">Name</label>
@@ -102,7 +102,7 @@
 					/>
 				</div>
 				<div class="form-group">
-					<button onclick="submitData()" type="submit" class="btn btn-primary">Submit</button>
+					<button onclick="submitData()" type="submit" class="btn btn-primary" disabled='true' id="submitBtn">Submit</button>
 					<a class="btn btn-primary" href="contact_list.php">List of contacts</a>
 				</div>				
 

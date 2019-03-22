@@ -6,7 +6,7 @@
 		$rows = new Modifiers();
 			$consulta = $rows->get_contacts();
 			echo "<table class='table'>
-				<thead>
+				<thead class=' justify-content-between'>
 						<tr>
 							<th>Name</th>
 							<th>e-mail</th>
@@ -17,19 +17,19 @@
 				</thead>";		
 			if(isset($consulta)){
 				foreach ($consulta as $row) {
-					echo "<tbody>";
+				echo "<tbody>";
 					echo "<tr>";
-						echo "<td>".$row['name']."<td>";
-						echo "<td>".$row['email']."<td>";
-						echo "<td>".$row['phone_num']."<td>";
-						echo "<td>".$row['company']."<td>";
-						echo "<td>".$row['birthday']."<td>";
+						echo "<td>".$row['name']."</td>";
+						echo "<td>".$row['email']."</td>";
+						echo "<td>".$row['phone_num']."</td>";
+						echo "<td>".$row['company']."</td>";
+						echo "<td>".$row['birthday']."</td>";
 						echo "<td id='deleteBtn'><button class='btn btn-danger' onclick='deleteContact(".$row['id'].")'>Eliminar</td>";
 						echo "<td id='updateBtn'><a class='btn btn-primary' href='./update_contact.php?id=".$row['id']."'>Update</td>";
 					echo "</tr>";
-				}
-			}
-			echo "</tbody>";
+						}
+					}
+				echo "</tbody>";
 			echo "</table>";
 
 			echo "
