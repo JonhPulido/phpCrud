@@ -1,5 +1,4 @@
 <?php
-mysql://b7d25c8d9f22d2:8eb30af5@us-cdbr-iron-east-03.cleardb.net/heroku_d17110f89ab0fc8?reconnect=true
 	class Conection {
 		public function get_conection(){
 			$user = "b7d25c8d9f22d2";
