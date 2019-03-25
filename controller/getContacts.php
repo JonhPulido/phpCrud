@@ -1,6 +1,7 @@
 <?php 
 	require_once('model/mysql_connection.php');
 	require_once('model/CRUD.php');
+	header("Access-Control-Allow-Origin: https://php-crud-validations.herokuapp.com");
 
 	function load_contacts(){
 		$rows = new Modifiers();

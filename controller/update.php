@@ -1,6 +1,7 @@
 <?php
 	require_once('../model/mysql_connection.php');
 	require_once('../model/CRUD.php');
+	header("Access-Control-Allow-Origin: https://php-crud-validations.herokuapp.com");
 
 	$mensaje = null;
 	$id = $_POST['id'];
