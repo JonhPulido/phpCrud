@@ -1,6 +1,5 @@
 <?php
 	class Conection {
-		
 		public function get_conection(){
 			$user = "b7d25c8d9f22d2";
 			$pass = "8eb30af5";

@@ -22,7 +22,7 @@
 	<?php load_contacts(); ?>
 	<br>
 	<div>
-		<a href="index.html">Add new contact</a>
+		<a href="contact_form.html">Add new contact</a>
 	</div>
 
 </body>
