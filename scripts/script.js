@@ -49,12 +49,12 @@ function submitData(){
 	if(validateForm()){ 
 		$.ajax({
 			type: "POST",
-			url: 'http://localhost/TestPhp/controller/insert.php',
+			url: 'https://php-crud-validations.herokuapp.com/controller/insert.php',
 			data: $(form).serialize(),
 			dataType: 'text',
 			success : function(res) {
 				alert('form was submitted');
-				window.location.href = "http://localhost/TestPhp/contact_list.php";
+				window.location.href = "https://php-crud-validations.herokuapp.com/contact_list.php";
 			}
 		});
 	}else{
@@ -68,11 +68,11 @@ function updateContact(){
 	if(validateForm()){	
 		$.ajax({
 					type: "POST",
-					url: 'http://localhost/TestPhp/controller/update.php',
+					url: 'https://php-crud-validations.herokuapp.com/controller/update.php',
 					data: $(form).serialize(),
 					success: function(){
 						alert('register updated succefully!')
-						window.location.href = "http://localhost/TestPhp/contact_list.php";
+						window.location.href = "https://php-crud-validations.herokuapp.com/contact_list.php";
 					}
 				});
 	}
@@ -81,11 +81,11 @@ function updateContact(){
 function deleteContact(id){	
 	$.ajax({
 	  type: "POST",
-	  url: 'http://localhost/TestPhp/controller/delete.php',
+	  url: 'https://php-crud-validations.herokuapp.com/controller/delete.php',
 	  data:'id=' + id, 
 	  success: function (res){
 	          		alert(res);
-	          		window.location.href = "http://localhost/TestPhp/contact_list.php";
+	          		window.location.href = "https://php-crud-validations.herokuapp.com/contact_list.php";
 	            }
 
 	});
